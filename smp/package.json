@@ -1,0 +1,21 @@
+{
+    "name":        "sample",
+    "version":     "0.0.0",
+    "devDependencies": {
+        "@babel/cli":                          "~7.0.0-beta.39",
+        "@babel/node":                         "~7.0.0-beta.39",
+        "@babel/core":                         "~7.0.0-beta.39",
+        "@babel/preset-env":                   "~7.0.0-beta.39",
+        "babel-plugin-named-params":           ".."
+    },
+    "dependencies" : {
+        "babel-runtime-named-params":          "../../babel-runtime-named-params"
+    },
+    "engines": {
+        "node":                                ">=8.0.0"
+    },
+    "scripts": {
+        "test":      "BABEL_DISABLE_CACHE=1 babel-node sample.js",
+        "transpile": "BABEL_DISABLE_CACHE=1 babel      sample.js"
+    }
+}
