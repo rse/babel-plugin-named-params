@@ -10,7 +10,7 @@
         "babel-plugin-named-params":                 ".."
     },
     "dependencies" : {
-        "babel-runtime-named-params":                "../../babel-runtime-named-params"
+        "babel-runtime-named-params":                "babel-runtime-named-params"
     },
     "engines": {
         "node":                                      ">=8.0.0"
