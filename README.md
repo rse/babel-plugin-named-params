@@ -101,10 +101,11 @@ Caveat Emptor
 
 - *Function Declaration and Transpilation*: Although the named parameters need
   a Babel-based transpilation theirself, the function declarations
-  should not be transpiled to ECMAScript 5, as Babel would remove
-  parameters with defaults from the function declaration. To be able
-  to use function declarations of the form `fn (a, b, c = def1, d =
-  def2) { ... }` you have to at least target Node 8 with the help of
+  should not be transpiled to a target environment below ECMAScript
+  2015, as Babel would remove parameters with defaults from the
+  function declaration. To be able to use function declarations of the
+  form `fn (a, b, c = def1, d = def2) { ... }` you have to at least
+  target an ECMAScript 2015 environment like Node 6 with the help of
   `@babel/preset-env` or the underlying `func-params` utility function
   will to be able to determine the `c` and `d` parameters.
 
