@@ -170,6 +170,16 @@ Caveat Emptor
   second and all subsequent function invocation, the indirect function invocation
   is just slightly slower than the regular invocation.
 
+- *Assignment Expression*: As explained above, this plugin changes the
+  semantics of the assignment expressions inside function argument
+  lists. By definition, in `foo(id = expr)` the `expr` is assigned to a
+  variable with the identifier `id` in the lexical scope of the function
+  call. With this plugin, this is no longer the case. Now `expr` is
+  assigned to the parameter with the identifier `id` in the function
+  declaration. This is a change is semantics, of course. On the other
+  hand, an assignment expression inside a function argument list could
+  be considered a strange coding practice anyway.
+
 Installation
 ------------
 
