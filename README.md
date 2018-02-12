@@ -40,12 +40,15 @@ fn.apply(undefined, [ "foo", 42, 7, "bar" ])
 baz.quux.fn.apply(baz.quux, [ "foo", 42, 7, "bar" ])
 ```
 
-...or the equivalent of the ECMAScript 2015 variant:
+...or the equivalent of the regular calls:
 
 ```js
-fn(...[ "foo", 42, 7, "bar" ])
-baz.quux.fn(...[ "foo", 42, 7, "bar" ])
+fn("foo", 42, 7, "bar")
+baz.quux.fn("foo", 42, 7, "bar")
 ```
+
+Features
+--------
 
 The following particular features are provided:
 
