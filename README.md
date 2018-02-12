@@ -194,7 +194,12 @@ Usage
             }
         } ]
     ],
-    "plugins": [ "named-params" ]
+    "plugins": [
+        [ "named-params", {
+            "options": true,
+            "caching": true
+        } ]
+    ]
 }
 ```
 
