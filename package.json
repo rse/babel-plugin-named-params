@@ -1,6 +1,6 @@
 {
     "name":        "babel-plugin-named-params",
-    "version":     "0.9.3",
+    "version":     "0.9.4",
     "description": "Babel Plugin for Named Function Parameters",
     "repository":  "https://github.com/rse/babel-plugin-named-params",
     "license":     "MIT",
