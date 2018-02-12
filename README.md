@@ -29,10 +29,10 @@ T(undefined, fn, [ 42, 7 ], { a: "foo", d: "bar" })
 T(baz.quux, baz.quux.fn, [ 42, 7 ], { a "foo", d: "bar" })
 ```
 
-...where `T` is the transformation function
+...where `T` is the "trampoline" function
 of the corresponding run-time module
-[`babel-runtime-named-params`](http://github.com/rse/babel-runtime-named
--params). Assuming the `fn` function was declared as `function fn (a, b,
+[`babel-runtime-named-params`](http://github.com/rse/babel-runtime-named-params).
+Assuming the `fn` function was declared as `function fn (a, b,
 c, d) { ... }`, these output constructs under run-time finally translate into
 an equivalent of the ECMAScript 2015 variant:
 
