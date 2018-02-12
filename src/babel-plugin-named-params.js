@@ -27,7 +27,9 @@ const plugin = (babel, options) => {
     /*  determine plugin options  */
     options = Object.assign({
         moduleName:   "babel-runtime-named-params",
-        functionName: "__babelRuntimeNamedParams"
+        functionName: "__babelRuntimeNamedParams",
+        options:      true,
+        caching:      true
     }, options)
 
     /*  return the plugin configuration  */
@@ -88,15 +90,27 @@ const plugin = (babel, options) => {
                     return
 
                 /*  replace the CallExpression with a new one  */
+                let opts = []
+                if (!options.options || !options.caching) {
+                    if (!options.options)
+                        opts.push(babel.types.objectProperty(
+                            babel.types.identifier("options"),
+                            babel.types.booleanLiteral(false)))
+                    if (!options.caching)
+                        opts.push(babel.types.objectProperty(
+                            babel.types.identifier("caching"),
+                            babel.types.booleanLiteral(false)))
+                    opts = [ babel.types.objectExpression(opts) ]
+                }
                 path.replaceWith(
                     babel.types.callExpression(
                         /*  the transform function name  */
                         babel.types.identifier(options.functionName),
                         [
-                            /*  the previous context or null  */
+                            /*  the previous context or undefined  */
                             path.get("callee").isMemberExpression() ?
                                 path.node.callee.object :
-                                babel.types.nullLiteral(),
+                                babel.types.identifier("undefined"),
 
                             /*  the previous callee  */
                             path.node.callee,
@@ -117,7 +131,7 @@ const plugin = (babel, options) => {
                                     )
                                 })
                             )
-                        ]
+                        ].concat(opts)
                     )
                 )
 
