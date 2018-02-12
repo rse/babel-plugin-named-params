@@ -124,10 +124,10 @@ Caveat Emptor
   part of the transpilation process itself), the run-time performance
   decreases somewhat. At least on the first function invocation.
   Internally, the source code of the target function is parsed and the
-  result cached. So, on the first function call, the parsing causes the
-  function call to be much slower than the regular call, while on the
-  second and all subsequent function calls, the indirect function call
-  is just slightly slower than the regular call.
+  result cached in memory. So, on the first function invocation, the parsing causes the
+  function invocation to be much slower than the regular invocation, while on the
+  second and all subsequent function invocation, the indirect function invocation
+  is just slightly slower than the regular invocation.
 
 Installation
 ------------
