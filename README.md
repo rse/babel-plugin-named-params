@@ -47,6 +47,43 @@ fn("foo", 42, 7, "bar")
 baz.quux.fn("foo", 42, 7, "bar")
 ```
 
+Motivation
+----------
+
+This plugin is motivated by the wish of the author to have a more
+elegant approach to named parameters in JavaScript than the
+usual convention of passing an object argument provides. For
+such a conventional ECMAScript 2018 function declaration...
+
+```js
+function foo (arg1, arg2, __options) {
+    let { opt1, opt2 } = { opt1: "def1", opt2: "def2", ...__options }
+    console.log(arg1, arg2, opt1, opt2)
+}
+```
+
+...in addition, to the regular usage...
+
+```js
+foo("val1", "val2", { opt1: "val3", opt2: "val4" })
+// -> "val1", "val2", "val3", "val4"
+```
+
+...you can now use it with less boilerplate...
+
+```js
+foo("val1", "val2", opt1 = "val3", opt2 = "val4")
+// -> "val1", "val2", "val3", "val4"
+```
+
+...and even make the function declaration more elegant:
+
+```js
+function foo (arg1, arg2, opt1 = "def1", opt2 = "def2") {
+    console.log(arg1, arg2, opt1, opt2)
+}
+```
+
 Features
 --------
 
