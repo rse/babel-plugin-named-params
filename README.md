@@ -75,7 +75,7 @@ The following particular features are provided:
   translated to resulting positional parameters at their particular
   positions. Third, all original positional parameters are translated to
   resulting positional parameters at still unused positions (from left
-  to right).
+  to right). All remaining unused positions are filled with the value `undefined`.
 
 - *Options Parameter*: In the JavaScript world, there is the convention of
   having an `opt`, `opts`, `option`, `options`, `setting` or `settings`
