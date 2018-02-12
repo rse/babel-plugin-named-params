@@ -86,7 +86,7 @@ function foo (arg1, arg2, opt1 = "def1", opt2 = "def2") {
 
 Additionally, similar to Unix command-line option arguments (`-x` or
 `--xx`), which most of the time can be mixed with positional arguments,
-one can now mix named and positional function arguments.
+one can now mix named and positional function arguments, too.
 
 Features
 --------
