@@ -112,12 +112,12 @@ Caveat Emptor
 - *Increased Code Size*: As the determination of function parameters is
   done under run-time (to support arbitrary existing code which is not
   part of the transpilation process itself), the resulting code size
-  of your application increased by about 40KB. This is harmless for
+  of your application increased by about 26KB. This is harmless for
   applications and libraries in the Node environments or applications
   in Browser environments, but can hurt you for libraries in Browser
   environments. Hence, try to not use this feature for libraries
   intended to be used in Browser environments or accept that their size
-  increases by about 40KB.
+  increases by about 26KB.
 
 - *Decreased Run-Time Performance*: As the determination of function parameters is
   done under run-time (to support arbitrary existing code which is not
