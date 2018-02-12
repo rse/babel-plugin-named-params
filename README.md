@@ -56,8 +56,8 @@ usual convention of passing an object argument provides. For
 such a conventional ECMAScript 2018 function declaration...
 
 ```js
-function foo (arg1, arg2, __options) {
-    let { opt1, opt2 } = { opt1: "def1", opt2: "def2", ...__options }
+function foo (arg1, arg2, options) {
+    let { opt1, opt2 } = { opt1: "def1", opt2: "def2", ...options }
     console.log(arg1, arg2, opt1, opt2)
 }
 ```
@@ -119,13 +119,13 @@ The following particular features are provided:
   to right). All remaining unused positions are filled with the value `undefined`.
 
 - *Options Parameter*: In the JavaScript world, there is the convention of
-  having an `opt`, `opts`, `option`, `options`, `setting` or `settings`
-  function parameter which receives an object of options. In case a
-  named parameter in the function call is not found in the function
-  declaration, but such an options parameter exists, the named parameter
-  is passed as an option parameter field. For a function declaration
-  `function fn (a, b, c, options) { ... }` all of the following function
-  calls result in a call `fn(x, y, z, { foo: 42, bar: 7 })`:
+  having an `options` function parameter which receives an object of
+  options. In case a named parameter in the function call is not found
+  in the function declaration, but such an options parameter exists,
+  the named parameter is passed as an option parameter field. For a
+  function declaration `function fn (a, b, c, options) { ... }` all of
+  the following function calls result in a call `fn(x, y, z, { foo: 42,
+  bar: 7 })`:
 
   ```js
   fn(x, y, z, options = { foo: 42, bar: 7 })  // explicit options parameter (in positional order)
