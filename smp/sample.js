@@ -16,3 +16,15 @@ f2(1, 2, options = { foo: "bar", baz: "quux" })
 f2(1, 2, foo = "bar", baz = "quux")
 f2(1, 2, baz = "quux", options = { foo: "bar" })
 
+const f3 = (arg1, arg2, options) => {
+    let { opt1, opt2 } = { opt1: "def1", opt2: "def2", ...options }
+    console.log(arg1, arg2, opt1, opt2)
+}
+f3("val1", "val2", { opt1: "val3", opt2: "val4" })
+f3("val1", "val2", opt1 = "val3", opt2 = "val4")
+
+const f4 = (arg1, arg2, opt1 = "def1", opt2 = "def2") => {
+    console.log(arg1, arg2, opt1, opt2)
+}
+f4("val1", "val2", opt1 = "val3", opt2 = "val4")
+
