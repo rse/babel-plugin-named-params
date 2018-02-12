@@ -149,7 +149,7 @@ Usage
     "presets": [
         [ "@babel/preset-env", {
             "targets": {
-                "node": "8.0"
+                "node": "6.0"
             }
         } ]
     ],
