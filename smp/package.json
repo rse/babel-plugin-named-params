@@ -2,15 +2,15 @@
     "name":        "sample",
     "version":     "0.0.0",
     "devDependencies": {
-        "@babel/cli":                                "~7.0.0-beta.39",
-        "@babel/node":                               "~7.0.0-beta.39",
-        "@babel/core":                               "~7.0.0-beta.39",
-        "@babel/preset-env":                         "~7.0.0-beta.39",
-        "@babel/plugin-proposal-object-rest-spread": "~7.0.0-beta.39",
+        "@babel/cli":                                "7.2.3",
+        "@babel/node":                               "7.2.2",
+        "@babel/core":                               "7.2.2",
+        "@babel/preset-env":                         "7.2.3",
+        "@babel/plugin-proposal-object-rest-spread": "7.2.0",
         "babel-plugin-named-params":                 ".."
     },
     "dependencies" : {
-        "babel-runtime-named-params":                "babel-runtime-named-params"
+        "babel-runtime-named-params":                "0.9.14"
     },
     "engines": {
         "node":                                      ">=8.0.0"
