@@ -2,10 +2,20 @@
     "name":        "babel-plugin-named-params",
     "version":     "0.9.13",
     "description": "Babel Plugin for Named Function Parameters",
-    "repository":  "https://github.com/rse/babel-plugin-named-params",
     "license":     "MIT",
     "main":        "./index.js",
     "keywords":    [ "babel-plugin" ],
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/rse/babel-plugin-named-params"
+    },
+    "author": {
+        "name":  "Dr. Ralf S. Engelschall",
+        "email": "rse@engelschall.com",
+        "url":   "http://engelschall.com"
+    },
+    "homepage": "https://github.com/rse/babel-plugin-named-params",
+    "bugs":     "https://github.com/rse/babel-plugin-named-params/issues",
     "peerDependencies": {
         "@babel/core":                      "7.4.5"
     },
