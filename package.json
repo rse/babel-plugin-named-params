@@ -7,20 +7,20 @@
     "main":        "./index.js",
     "keywords":    [ "babel-plugin" ],
     "peerDependencies": {
-        "@babel/core":                      "7.2.2"
+        "@babel/core":                      "7.4.5"
     },
     "devDependencies": {
         "babylon":                          "7.0.0-beta.39",
-        "@babel/core":                      "7.2.2",
-        "@babel/generator":                 "7.2.2",
+        "@babel/core":                      "7.4.5",
+        "@babel/generator":                 "7.4.4",
         "@babel/helper-plugin-test-runner": "7.1.0",
         "babel-eslint":                     "10.0.1",
-        "eslint":                           "5.10.0",
+        "eslint":                           "5.16.0",
         "eslint-config-standard":           "12.0.0",
         "eslint-plugin-standard":           "4.0.0",
-        "eslint-plugin-promise":            "4.0.1",
-        "eslint-plugin-import":             "2.14.0",
-        "eslint-plugin-node":               "8.0.0"
+        "eslint-plugin-promise":            "4.1.1",
+        "eslint-plugin-import":             "2.17.3",
+        "eslint-plugin-node":               "9.1.0"
     },
     "engines": {
         "node":                             ">=8.0.0"
