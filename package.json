@@ -1,6 +1,6 @@
 {
     "name":        "babel-plugin-named-params",
-    "version":     "0.9.14",
+    "version":     "0.9.15",
     "description": "Babel Plugin for Named Function Parameters",
     "license":     "MIT",
     "main":        "./index.js",
