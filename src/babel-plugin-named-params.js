@@ -69,12 +69,12 @@ const plugin = (babel, options) => {
             /*  visit the CallExpression nodes (all function calls)  */
             CallExpression (path, { file }) {
                 /*  determine types of parameters  */
-                let pp = []
-                let np = []
+                const pp = []
+                const np = []
                 path.get("arguments").forEach((path) => {
                     if (path.isAssignmentExpression() && path.get("left").isIdentifier()) {
                         /*  assignment expression with an identifier (treated as a named parameter)  */
-                        let name = path.get("left").node.name
+                        const name = path.get("left").node.name
                         if (np.findIndex((p) => p.get("left").isIdentifier({ name: name })) >= 0)
                             throw path.buildCodeFrameError(`named parameter "${name}" occurs multiple times`)
                         np.push(path)
@@ -100,7 +100,7 @@ const plugin = (babel, options) => {
                         opts.push(babel.types.objectProperty(
                             babel.types.identifier("caching"),
                             babel.types.booleanLiteral(false)))
-                    opts = [ babel.types.objectExpression(opts) ]
+                    opts = [babel.types.objectExpression(opts)]
                 }
                 path.replaceWith(
                     babel.types.callExpression(
